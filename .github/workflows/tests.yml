@@ -1,0 +1,25 @@
+name: Tests
+
+# Installs the formula from source and runs its test, on macOS and Linux, at every change.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  install:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: Homebrew/actions/setup-homebrew@main
+      - run: brew install --build-from-source andreaiannarone/cc-profiles/cc-profiles
+      - run: brew test andreaiannarone/cc-profiles/cc-profiles
+      - run: cc-profiles --version
+      - run: brew audit --strict andreaiannarone/cc-profiles/cc-profiles
