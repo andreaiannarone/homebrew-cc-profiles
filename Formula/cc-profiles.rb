@@ -3,8 +3,8 @@ class CcProfiles < Formula
 
   desc "Local web UI to manage multiple Claude Code profiles"
   homepage "https://github.com/andreaiannarone/cc-profiles"
-  url "https://files.pythonhosted.org/packages/ca/26/8431e511bbcc002de82e91da2f0699b4c2906c11ff26d92d592535029e09/cc_profiles-0.5.1.tar.gz"
-  sha256 "cd3041d4f178bfa536f28991722a74f522abdd12537cba3f497522dd81f746b3"
+  url "https://files.pythonhosted.org/packages/89/a7/2d5f7b9ad778c485874a7c43f13d06bf651d07f1b111b91fd6c0f5e800ff/cc_profiles-0.5.2.tar.gz"
+  sha256 "3eb326554be3de0043b1df94d4831044557dc2dddd19ae657b916212778e076c"
   license "GPL-3.0-or-later"
 
   depends_on "python-setuptools" => :build  # the sdist builds with setuptools; Homebrew builds without isolation
@@ -17,7 +17,7 @@ class CcProfiles < Formula
   def caveats
     <<~EOS
       Open it with: cc-profiles open
-      Add /cc-profiles to Claude Code with: cc-profiles install-command
+      Start it once and it adds /cc-profiles to Claude Code in every profile.
     EOS
   end
 
