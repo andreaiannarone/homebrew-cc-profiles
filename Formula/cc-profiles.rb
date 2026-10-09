@@ -3,8 +3,8 @@ class CcProfiles < Formula
 
   desc "Local web UI to manage multiple Claude Code profiles"
   homepage "https://github.com/andreaiannarone/cc-profiles"
-  url "https://files.pythonhosted.org/packages/8c/62/51c808b1446a738d64f32ad7dc44477a7b8e5fa192cf8173f6c9be52534f/cc_profiles-0.5.3.tar.gz"
-  sha256 "b04135296d55295743466ad78508ff2e5e1daade04d41b23dc446fd64475412e"
+  url "https://files.pythonhosted.org/packages/56/d9/9082710f7207667bb789d95f7fc452a681e55fee2454785c18ea5bc3c9fa/cc_profiles-0.5.4.tar.gz"
+  sha256 "ff71a4a960b7cad1ca451473efd7ae0cfec29a1d3cc511f2b5c8df6dd7603435"
   license "GPL-3.0-or-later"
 
   depends_on "python-setuptools" => :build  # the sdist builds with setuptools; Homebrew builds without isolation
